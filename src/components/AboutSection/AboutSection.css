@@ -1,0 +1,99 @@
+/* About.css */
+
+.about-section {
+    padding: 100px 0;
+    background-color: #fff;
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .about-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 25px;
+  }
+  
+  .about-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0  0;
+  }
+  
+  .about-features li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .about-features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-size: 1.2rem;
+  }
+  
+  .learn-more-btn {
+    background-color: transparent;
+    border: 2px solid #d4af37;
+    color: #333;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #d4af37;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+    
+    .about-section {
+      padding: 60px 0;
+    }
+    
+    .about-section h2 {
+      font-size: 2rem;
+    }
+  }
