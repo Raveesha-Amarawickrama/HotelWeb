@@ -1,0 +1,135 @@
+.facilities-section {
+    position: relative;
+    padding: 60px 0;
+    background-image: url('../../assets/facilities-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  .facilities-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15, 15, 15, 0.85);
+    z-index: 1;
+  }
+  
+  .facilities-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .facilities-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+    color: white;
+  }
+  
+  .facilities-section h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    background-color: #c8a97e;
+    transform: translateX(-50%);
+  }
+  
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .facility-card {
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .facility-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .facility-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .facility-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    line-height: 1;
+  }
+  
+  .facility-header h3 {
+    font-size: 1.15rem;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .facility-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .facility-list li {
+    padding: 6px 0 6px 15px;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .facility-list li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #c8a97e;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .facilities-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .facilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .facilities-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .facilities-section h2 {
+      font-size: 1.8rem;
+    }
+  }
