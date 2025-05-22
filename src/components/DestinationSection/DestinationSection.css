@@ -1,0 +1,281 @@
+/* Main Container Styles */
+.destination-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .destination-header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 18px;
+    font-weight: 300;
+    color: #5f6368;
+  }
+  
+  /* Map Styles */
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 256px;
+    overflow: hidden;
+  }
+  
+  .map-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9fa;
+  }
+  
+  .water-feature {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #c6dcf1;
+  }
+  
+  .map-grid-h {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+  }
+  
+  .map-grid-v {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #e0e0e0;
+  }
+  
+  .grid-h-1 { top: 33%; }
+  .grid-h-2 { top: 66%; }
+  .grid-v-1 { left: 25%; }
+  .grid-v-2 { left: 66%; }
+  
+  /* Map Controls */
+  .map-controls {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    display: flex;
+    gap: 4px;
+  }
+  
+  .zoom-controls {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .zoom-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    color: #5f6368;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .zoom-in {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .zoom-button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .person-view {
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .map-copyright {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    font-size: 10px;
+    color: #5f6368;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0 4px;
+    border-radius: 2px;
+  }
+  
+  /* Map Markers */
+  .map-marker {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .marker-main {
+    top: 48px;
+    left: 96px;
+  }
+  
+  .marker-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .marker-small {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .marker-red { background-color: #ea4335; }
+  .marker-purple { background-color: #a142f4; }
+  .marker-yellow { background-color: #fbbc04; }
+  .marker-green { background-color: #34a853; }
+  
+  .marker-city { top: 96px; right: 192px; }
+  .marker-beach { bottom: 64px; left: 144px; }
+  .marker-airport { top: 40px; right: 96px; }
+  
+  .marker-label {
+    margin-top: 4px;
+    padding: 2px 6px;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 11px;
+    color: #3c4043;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Information Grid */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  @media (max-width: 768px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .info-section {
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .info-section:not(:last-child) {
+    border-right: 1px solid #e5e5e5;
+  }
+  
+  .info-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #3c4043;
+    margin-bottom: 8px;
+  }
+  
+  .info-content {
+    font-size: 12px;
+    color: #5f6368;
+  }
+  
+  .info-item {
+    margin-bottom: 4px;
+  }
+  
+  /* Check-in/Check-out Styles */
+  .check-time {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  
+  .check-icon {
+    margin-right: 6px;
+    margin-top: 2px;
+    color: #5f6368;
+  }
+  
+  .check-details {
+    line-height: 1.4;
+  }
+  
+  .check-note {
+    color: #80868b;
+  }
+  
+  /* Payment Methods */
+  .payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 12px;
+  }
+  
+  .payment-card {
+    width: 40px;
+    height: 24px;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-visa {
+    font-weight: bold;
+    font-size: 11px;
+    color: #1a73e8;
+  }
+  
+  .card-mc {
+    font-weight: bold;
+    font-size: 11px;
+    color: #ea4335;
+  }
+  
+  .card-amex {
+    font-weight: bold;
+    font-size: 11px;
+    color: #1a73e8;
+  }
+  
+  .card-jcb {
+    font-weight: bold;
+    font-size: 11px;
+    color: #3c4043;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .contact-icon {
+    margin-right: 6px;
+    color: #5f6368;
+  }
