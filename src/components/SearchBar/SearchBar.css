@@ -1,0 +1,38 @@
+.search-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    /* Added styles to ensure input text color */
+    -webkit-text-fill-color: white;
+    caret-color: white;
+    border: #d4af37 1px solid;
+  }
+  
+  /* Add styles for date inputs specifically */
+  input[type="date"].search-input {
+    color: white;
+    -webkit-text-fill-color: rgb(0, 0, 0);
+  }
+  
+  /* Style the date picker calendar icon */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Makes the calendar icon white */
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #d4af37;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Additional styles to ensure placeholder text is visible */
+  .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
