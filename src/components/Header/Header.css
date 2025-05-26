@@ -1,0 +1,164 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+   
+    padding: 0;
+  }
+  
+  .main-header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    height: 20%;
+   
+    z-index: 1000;
+  margin-top: -70px;
+  
+  }
+  
+  .container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -500px;
+  }
+  
+  .logo img {
+    height: 100px;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 1500px;
+  
+    transition: color 0.2s;
+  }
+  
+  .nav a:hover {
+    color: #d4af37;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .book-btn {
+    background: #d4af37;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .book-btn:hover {
+    background: #c19c2d;
+  }
+  
+  .auth a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .auth a:hover {
+    color: #d4af37;
+  }
+  
+  .icon-btn {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .profile {
+    position: relative;
+  }
+  
+  .profile-menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background: white;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 12px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 160px;
+    z-index: 1001;
+  }
+  
+  .profile-menu span {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .profile-menu a, .profile-menu button {
+    text-decoration: none;
+    color: #333;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  .profile-menu a:hover, .profile-menu button:hover {
+    color: #d4af37;
+  }
+  
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      padding: 20px 0;
+      display: none;
+    }
+  
+    .nav.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .actions {
+      gap: 10px;
+    }
+  }
+  
