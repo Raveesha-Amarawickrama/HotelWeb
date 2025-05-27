@@ -1,0 +1,85 @@
+.rooms-container {
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .room-banner {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .room-content h2 {
+    font-size: 32px;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .room-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .room-content p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  section {
+    margin-top: 30px;
+  }
+  
+  h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .amenity-group h5 {
+    font-size: 16px;
+    margin: 15px 0 5px;
+  }
+  
+  .amenity-group ul,
+  section ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .child-policy {
+    margin-top: 20px;
+  }
+  
+  .price-box {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f2f2f2;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price-box strong {
+    font-size: 18px;
+    color: #000;
+  }
+  
+  .price-box button {
+    background-color: #c79445;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .price-box button:hover {
+    background-color: #a5762d;
+  }
+  
