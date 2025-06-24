@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+🏨 **Full Hotel Website**
+This is a full-stack hotel booking website project with:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Backend: Node.js, Express.js, MongoDB (MERN stack)
 
-## Available Scripts
+Frontend: React.js
 
-In the project directory, you can run:
+The backend exposes REST APIs for user authentication, room management, booking, gallery, and offers. The frontend consumes these APIs with a responsive UI for customers and admins.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Features**
+User registration/login with JWT authentication
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Role-based access (user, admin)
 
-### `npm test`
+CRUD for rooms, bookings, offers, and gallery images
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+File upload support (Multer + Cloudinary)
 
-### `npm run build`
+Contact form handling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Email notifications via Nodemailer
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Error handling & validation middleware
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Setup**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+cd hotel-backend
+npm install
+Create .env file based on .env.example:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ini
+Copy code
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/hotel
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_email_password
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run server:
 
-## Learn More
+npm run dev
+API base URL: http://localhost:5000/api
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Frontend (React)**
+Features
+User registration and login (JWT stored in memory or localStorage)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Room browsing with search and filtering
 
-### Code Splitting
+Booking creation and management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Gallery and offers display
 
-### Analyzing the Bundle Size
+Responsive design (mobile & desktop)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Form validation and error handling
 
-### Making a Progressive Web App
+React Router v6 for navigation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Context API for state management (Auth, Cart, etc.)
 
-### Advanced Configuration
+**Setup**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+cd frontend
+npm install
+Create .env file:
 
-### Deployment
+VITE_API_BASE_URL=http://localhost:5000/api
+Run development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm run dev
+# or npm start if Create React App
+Open in browser:
 
-### `npm run build` fails to minify
+Vite: http://localhost:5173
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+CRA: http://localhost:3000
+
+**API Overview**
+Endpoint	Description	Methods	Auth Required
+/api/auth	Register, Login	POST	No
+/api/users	List users, Profile	GET	Yes
+/api/rooms	Rooms CRUD	GET, POST, PUT, DELETE	Admin for CUD
+/api/bookings	Create, view, cancel bookings	GET, POST, PUT	Yes
+/api/contact	Contact form submissions	POST, GET	No
+/api/gallery	Gallery image upload & listing	GET, POST, DELETE	Auth for POST & DELETE
+/api/offers	Offers CRUD	GET, POST, DELETE	Admin for CUD
+
+Environment Variables
+Both backend and frontend use environment variables stored in .env files.
+
+
+Use Postman or similar tools to test backend APIs.
+
+Protect admin routes with middleware checking user roles.
+
+Store JWT tokens securely on the client (e.g., HttpOnly cookie or localStorage with care).
+
+Use React Context or Redux for managing global auth state.
+
+Implement loading and error UI states on frontend.
+
+Optimize image uploads with Cloudinary for better performance.
+
+Add unit and integration tests for backend and frontend. 
+
+
+
+
+Author
+Ravisha Hashani Amarawikrama
+Full MERN Hotel Website Project
+© 2025
