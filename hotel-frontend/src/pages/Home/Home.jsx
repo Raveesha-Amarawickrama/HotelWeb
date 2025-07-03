@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import About from '../../components/AboutSection/About';
-import FacilitiesSection from '../../components/FacilitiesSection/FacilitiesSection';
+import Header from '../../components/Header/Header.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import About from '../../components/AboutSection/About.jsx';
+import FacilitiesSection from '../../components/FacilitiesSection/FacilitiesSection.jsx';
 import AuthContext from '../../context/AuthContext.jsx';
 import './Home.css';
 import hotelVideo from '../../assets/hotelbg.mp4';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar.jsx';
 
 const Home = () => {
   const { isAuthenticated } = useContext(AuthContext);

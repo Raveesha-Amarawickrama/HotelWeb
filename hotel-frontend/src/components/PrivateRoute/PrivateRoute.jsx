@@ -6,7 +6,7 @@ import AboutLearnMore from '../../pages/AboutLearnMore/AboutLearnMore';
 import Rooms from '../../pages/Rooms/Rooms';
 
 
-import PrivateRoute from '../../components/PrivateRoute/PrivateRoute';
+import PrivateRoute from './PrivateRoute';
 
 
 function App() {
